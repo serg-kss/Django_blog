@@ -1,0 +1,54 @@
+{% extends 'app1/base.html' %}
+
+{%block title%} 
+ Кабинет пользователя
+{% endblock %}
+
+{% block nav %}
+<div class="nav-scroller py-1 mb-2">
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="p-2 link-info" href="{% url 'home' %}">Мир</a>
+    <a class="p-2 link-light" href="#">Украина</a>
+    <a class="p-2 link-light" href="#">Технология</a>
+    <a class="p-2 link-light" href="#">Дизайн</a>
+    <a class="p-2 link-light" href="#">Культура</a>
+    <a class="p-2 link-light" href="#">Бизнесс</a>
+    <a class="p-2 link-light" href="#">Политика</a>
+    <a class="p-2 link-light" href="#">Мнения</a>
+    <a class="p-2 link-light" href="#">Наука</a>
+    <a class="p-2 link-light" href="#">Здоровье</a>
+    <a class="p-2 link-light" href="#">Стиль</a>
+    <a class="p-2 link-light" href="#">Путешествия</a>
+  </nav>
+</div>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="container">
+  <div class="d-flex text-muted pt-3">
+    <img class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="64" height="64" src="{{user.profile.img.url}}"></img>
+  
+    <p class="pb-3 mb-0 small lh-sm border-bottom">
+      <strong class="d-block text-gray-dark">{{user.username}}</strong>
+      {% if  user.email%}
+        <b>Email: {{user.email}}</b>
+      {% endif %}
+      
+    </p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+   
+{% endblock content %}
+
